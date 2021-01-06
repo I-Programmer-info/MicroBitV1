@@ -1,0 +1,12 @@
+{
+  "name": "microbitv1template",
+  "version": "0.0.0",
+  "bin": "./source",
+  "private": true,
+  "description": "Microbit V1 Template",
+  "author": "Harry Fairhead",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "microbit": "lancaster-university/microbit"
+  }
+}
