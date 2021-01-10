@@ -35,7 +35,7 @@ function(yotta_apply_target_rules target_type target_name)
             # objcopy to hex
             COMMAND arm-none-eabi-objcopy -O ihex ${target_name} ${target_name}.hex
             # and append the softdevice hex file
-            COMMAND srec_cat ${NRF51822_BOOTLOADER_HEX_FILE} -intel ${NRF51822_SOFTDEVICE_HEX_FILE} -intel ${target_name}.hex -intel -o ${target_name}-combined.hex -intel --line-length=44
+            COMMAND ..\\..\\yotta_targets\\bbc-microbit-classic-gcc\\CMake\\srec_cat ${NRF51822_BOOTLOADER_HEX_FILE} -intel ${NRF51822_SOFTDEVICE_HEX_FILE} -intel ${target_name}.hex -intel -o ${target_name}-combined.hex -intel --line-length=44
             COMMENT "hexifying and adding softdevice to ${target_name}"
             VERBATIM
         )
