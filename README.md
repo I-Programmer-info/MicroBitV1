@@ -1,2 +1,2 @@
 # MicroBitV1
- Template for C/C++ Projects
+ Template for MicroBit V1 C/C++ Projects
