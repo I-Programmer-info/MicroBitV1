@@ -164,7 +164,7 @@ set(YOTTA_MICROBITV1TEMPLATE_VERSION_PATCH 0)
 
 # provide the name of the current module so that it's available to custom CMake
 # even if custom CMake does weird things with project()
-set(YOTTA_MODULE_NAME microbitv1template)
+set(YOTTA_MODULE_NAME ${CMAKE_PROJECT_NAME})
 
 # recurse into subdirectories for this component, using the two-argument
 # add_subdirectory because the directories referred to here exist in the source
@@ -176,6 +176,6 @@ add_subdirectory(
 
 # make YOTTA_MODULE_NAME available as a preprocessor symbol when
 # compiling this module:
-target_compile_definitions(microbitv1template PRIVATE "-DYOTTA_MODULE_NAME=microbitv1template")
+target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE "-DYOTTA_MODULE_NAME=${CMAKE_PROJECT_NAME}")
 
 # include .cmake files provided by the target:
