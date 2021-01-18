@@ -12,16 +12,16 @@ set(YOTTA_AUTO_MICROBITV1TEMPLATE_CPP_FILES
 set_property(SOURCE ${YOTTA_AUTO_MICROBITV1TEMPLATE_CPP_FILES} PROPERTY OBJECT_DEPENDS "C:/Microbit/MicroBitV1Template/build/bbc-microbit-classic-gcc/yotta_config.h")
 
 
-add_executable (microbitv1template
+add_executable (${CMAKE_PROJECT_NAME}
     ${YOTTA_AUTO_MICROBITV1TEMPLATE_CPP_FILES}
 )
-set_target_properties(microbitv1template PROPERTIES ENABLE_EXPORTS ON)
+set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES ENABLE_EXPORTS ON)
 
-yotta_postprocess_target(EXECUTABLE microbitv1template)
+yotta_postprocess_target(EXECUTABLE ${CMAKE_PROJECT_NAME})
 
 
 
-target_link_libraries(microbitv1template
+target_link_libraries(${CMAKE_PROJECT_NAME}
     microbit
 )
 
